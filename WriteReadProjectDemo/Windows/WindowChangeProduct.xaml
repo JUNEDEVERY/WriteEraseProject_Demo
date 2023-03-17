@@ -1,0 +1,35 @@
+﻿<Window x:Class="WriteReadProjectDemo.Windows.WindowChangeProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WriteReadProjectDemo.Windows"
+        mc:Ignorable="d"
+        Background="#76e383"
+        Title="Изменение информации о продукте" Height="450" Width="450">
+    <Grid>
+        <Grid.RowDefinitions>
+        
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <GroupBox Header="Изменить наименование товара">
+                <TextBox Name="tbProductName"></TextBox>
+            </GroupBox>
+            <GroupBox Header="Изменить описание товара">
+                <TextBox Name="tbProductDescription"></TextBox>
+            </GroupBox>
+            <GroupBox Header="Изменить поставщика">
+                <ComboBox Name="cmbProductSupplier"></ComboBox>
+            </GroupBox>
+            <GroupBox Header="Изменить старую цену">
+                <TextBox Name="tbOldPrice"></TextBox>
+            </GroupBox>
+           
+            <GroupBox Header="Изменить процент скидки">
+                <TextBox Name="tbSale"></TextBox>
+            </GroupBox>
+            <Button  FontFamily="Comic Sans MS"  Background="#498c51" Content="Изменить" Name="btnChange" Click="btnChange_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
