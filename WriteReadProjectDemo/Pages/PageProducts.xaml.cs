@@ -243,10 +243,20 @@ namespace WriteReadProjectDemo
 
                 db.tbe.OrderProduct.Remove(item);
             }
-            db.tbe.Product.Remove(product);
-            db.tbe.SaveChanges();
-            MessageBox.Show("Товар " + product.ProductName + " был удален");
-            NavigationService.Navigate(new PageProducts(user));
+            var result = MessageBox.Show("Подтвердите удаление товара", "Системное диалоговое окно", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if(result == MessageBoxResult.Yes)
+            {
+                db.tbe.Product.Remove(product);
+                db.tbe.SaveChanges();
+                MessageBox.Show("Товар " + product.ProductName + " был удален");
+                NavigationService.Navigate(new PageProducts(user));
+            }
+            else
+            {
+                MessageBox.Show("Товар " + product.ProductName + " не удален");
+                NavigationService.Navigate(new PageProducts(user));
+            }
+          
 
 
         }
