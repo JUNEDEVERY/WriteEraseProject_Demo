@@ -28,5 +28,5 @@
 
 ## Авторы
 
-* **GerasimovNikita** - *Demo Project* - [JUNEDEVERY](https://github.com/JUNEDEVERY/WriteReadProjectDemoSoLast)
+* **GerasimovNikita** - *Demo Project* - [JUNEDEVERY](https://github.com/JUNEDEVERY/WriteEraseProject_Demo/tree/master)
 
